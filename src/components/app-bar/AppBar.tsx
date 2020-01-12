@@ -23,17 +23,15 @@ export const AppBar: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <MUIAppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit">
-            Photos
-          </Typography>
-        </Toolbar>
-      </MUIAppBar>
-    </div>
+    <MUIAppBar position="sticky">
+      <Toolbar variant="dense">
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" color="inherit">
+          Photos
+        </Typography>
+      </Toolbar>
+    </MUIAppBar>
   );
 };
