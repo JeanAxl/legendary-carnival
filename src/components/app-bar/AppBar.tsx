@@ -4,6 +4,7 @@ import { createStyles, Theme } from "@material-ui/core";
 
 import MUIAppBar from "@material-ui/core/AppBar";
 import { grey } from "@material-ui/core/colors";
+import { AppLink } from "./AppLink";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -35,11 +36,11 @@ export const AppBar: React.FC = () => {
   return (
     <MUIAppBar position="sticky">
       <div className={classes.root}>
-        <div className={classes.link}>About</div>
-        <div className={classes.link}>Join</div>
+        <AppLink url={"/"} label={"Accueil"} />
+        <AppLink url={"/join-us"} label={"Nous rejoindre"} />
         <div className={classes.logo}>AG</div>
-        <div className={classes.link}>devis</div>
-        <div className={classes.link}>contact</div>
+        <AppLink url={"/work-with-us"} label={"Travailler avec nous"} />
+        <AppLink url={"/contact"} label={"Contact"} />
       </div>
     </MUIAppBar>
   );
