@@ -2,7 +2,7 @@ import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { createStyles, Theme } from "@material-ui/core";
 import { grey } from "@material-ui/core/colors";
-import { Section } from "../common/section/Section";
+import { Section } from "../../common/section/Section";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 

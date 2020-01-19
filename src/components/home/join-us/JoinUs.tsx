@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "../common/section/Section";
+import { Section } from "../../common/section/Section";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { createStyles, Theme } from "@material-ui/core";
 import { grey } from "@material-ui/core/colors";
