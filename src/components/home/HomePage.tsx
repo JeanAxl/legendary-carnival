@@ -32,12 +32,12 @@ export const HomePage: React.FC = () => {
       <ChatBot
         title="My Bot"
         theme={AmplifyTheme}
-        botName="BookTrip"
+        botName="BookTrip_dev"
         welcomeMessage="Welcome, how can I help you today?"
         onComplete={handleComplete}
         clearOnComplete={true}
         conversationModeOn={false}
-      />{" "}
+      />
     </div>
   );
 };
