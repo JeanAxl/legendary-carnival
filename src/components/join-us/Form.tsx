@@ -6,6 +6,7 @@ import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
+import { DropZone } from "../_common/drop-zone/DropZone";
 
 type FormValues = {
   lastname: string;
@@ -67,6 +68,7 @@ export const JoinUsForm: React.FC = () => {
           </Form>
         )}
       />
+      <DropZone />
     </div>
   );
 };
