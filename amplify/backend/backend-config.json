@@ -4,5 +4,18 @@
 			"service": "S3AndCloudFront",
 			"providerPlugin": "awscloudformation"
 		}
+	},
+	"auth": {
+		"cognitob1a5141d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"interactions": {
+		"ppo": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
 	}
 }

@@ -10,6 +10,11 @@
             "StackName": "amplify-new-order-dev-162234",
             "StackId": "arn:aws:cloudformation:eu-west-1:881052635629:stack/amplify-new-order-dev-162234/07e47670-33bd-11ea-8c07-0a62b96e8314",
             "AmplifyAppId": "dq8oo2xli4uvg"
+        },
+        "categories": {
+            "auth": {
+                "cognitob1a5141d": {}
+            }
         }
     }
 }

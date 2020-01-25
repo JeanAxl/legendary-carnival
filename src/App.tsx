@@ -5,6 +5,11 @@ import { AppBar } from "./components/app-bar/AppBar";
 import { HomePage } from "./components/home/HomePage";
 import { JoinUsPage } from "./components/join-us/JoinUsPage";
 
+import Amplify, { Interactions } from "aws-amplify";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
+
 const App: React.FC = () => {
   return (
     <Router>
