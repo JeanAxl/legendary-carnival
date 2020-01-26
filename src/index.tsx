@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createMuiTheme, Theme, ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { Theme } from "@material-ui/core/styles/createMuiTheme";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { createMyTheme } from "./Theme";
 
-const theme: Theme = createMuiTheme();
+const theme: Theme = createMyTheme({});
 
 const Providers: React.FC = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
