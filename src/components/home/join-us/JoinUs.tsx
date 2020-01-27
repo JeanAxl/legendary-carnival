@@ -9,14 +9,14 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      marginTop: theme.spacing(2),
       height: "100%",
       display: "grid",
       gridTemplateColumns: "10% auto 60%",
       gridTemplateRows: "100%",
     },
     description: {
-      background: grey[500],
-      color: "white",
+      color: grey[500],
       padding: theme.spacing(3),
     },
     imageWrapper: {
@@ -34,9 +34,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "4rem",
     },
     button: {
-      color: "white",
+      color: grey[500],
       borderRadius: 0,
-      borderColor: "white",
+      borderColor: grey[500],
     },
   }),
 );

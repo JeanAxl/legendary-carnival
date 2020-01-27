@@ -1,27 +1,24 @@
 import React from "react";
+
 import { Formik, Form, Field, FieldProps } from "formik";
 import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
-import { DropZone } from "../_common/drop-zone/DropZone";
 
 type FormValues = {
   lastname: string;
   firstname: string;
-  gender: string;
-  motivation: string;
+  email: string;
+  message: string;
 };
 
-export const JoinUsForm: React.FC = () => {
+export const ContactUsForm: React.FC = () => {
   const initialValues: FormValues = {
     firstname: "",
     lastname: "",
-    gender: "homme",
-    motivation: "",
+    email: "",
+    message: "",
   };
+
   return (
     <div>
       <Formik
@@ -48,21 +45,15 @@ export const JoinUsForm: React.FC = () => {
               )}
             />
             <Field
-              name={"gender"}
+              name={"email"}
               render={({ field, form, meta }: FieldProps) => (
                 <div>
-                  <FormControl>
-                    <InputLabel id={"gender-select-label"}>Gender </InputLabel>
-                    <Select labelId={"gender-select-label"} {...field} fullWidth>
-                      <MenuItem value={"homme"}>Homme</MenuItem>
-                      <MenuItem value={"femme"}>Femme</MenuItem>
-                    </Select>
-                  </FormControl>
+                  <TextField type="text" label={"Nom"} {...field} />
                 </div>
               )}
             />
             <Field
-              name={"motivation"}
+              name={"message"}
               render={({ field, form, meta }: FieldProps) => (
                 <div>
                   <TextareaAutosize rowsMin={10} rowsMax={100} />
@@ -72,7 +63,6 @@ export const JoinUsForm: React.FC = () => {
           </Form>
         )}
       />
-      <DropZone />
     </div>
   );
 };
