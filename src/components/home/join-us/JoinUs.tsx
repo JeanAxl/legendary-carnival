@@ -9,7 +9,6 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      marginTop: theme.spacing(2),
       height: "100%",
       display: "grid",
       gridTemplateColumns: "10% auto 60%",
