@@ -1,34 +1,38 @@
-import React from "react";
+import React, { Fragment } from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { createStyles, Theme } from "@material-ui/core";
 
 import MUIAppBar from "@material-ui/core/AppBar";
-import { grey } from "@material-ui/core/colors";
 import { AppLink } from "./AppLink";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      background: grey[500],
+      background: "white",
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "space-between",
       alignItems: "center",
-    },
-    link: {
-      textTransform: "uppercase",
-      textAlign: "center",
-      width: "5%",
-      margin: theme.spacing(2),
+      marginRight: theme.spacing(40),
     },
     logo: {
       margin: theme.spacing(2),
+      color: theme.customPalette.green,
       width: "5%",
-      fontSize: "3rem",
+      fontSize: "2rem",
       textAlign: "center",
       fontWeight: "bold",
     },
   }),
 );
+const Logo = () => {
+  return (
+    <Fragment>
+      <span>P</span>
+      <span>P</span>
+      <span>O</span>
+    </Fragment>
+  );
+};
 
 export const AppBar: React.FC = () => {
   const classes = useStyles();
@@ -36,9 +40,9 @@ export const AppBar: React.FC = () => {
   return (
     <MUIAppBar position="sticky">
       <div className={classes.root}>
+        <div className={classes.logo}>PPO</div>
         <AppLink url={"/"} label={"Accueil"} />
         <AppLink url={"/join-us"} label={"Nous rejoindre"} />
-        <div className={classes.logo}>AG</div>
         <AppLink url={"/work-with-us"} label={"Travailler avec nous"} />
         <AppLink url={"/contact"} label={"Contact"} />
       </div>
