@@ -10,6 +10,8 @@ const useStyles = makeStyles((theme: Theme) => {
     root: {
       display: "flex",
       flexDirection: "column",
+      marginLeft: theme.spacing(4),
+      marginRight: theme.spacing(4),
     },
     sections: {},
   });

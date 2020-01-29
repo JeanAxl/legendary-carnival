@@ -38,7 +38,7 @@ export const AppBar: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <MUIAppBar position="sticky">
+    <MUIAppBar position="sticky" style={{ background: "white" }}>
       <div className={classes.root}>
         <div className={classes.logo}>PPO</div>
         <AppLink url={"/"} label={"Accueil"} />

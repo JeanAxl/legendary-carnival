@@ -5,32 +5,36 @@ import { createStyles, Theme } from "@material-ui/core";
 import { grey } from "@material-ui/core/colors";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { Divider } from "../../_common/divider/Divider";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      marginLeft: theme.spacing(3),
       height: "100%",
-      display: "grid",
-      gridTemplateColumns: "10% auto 60%",
-      gridTemplateRows: "100%",
+      display: "flex",
+      alignItems: "center",
     },
-    description: {
+    descriptionContainer: {
+      padding: theme.spacing(8),
+    },
+    descriptionContent: {
+      marginTop: theme.spacing(8),
       color: grey[500],
-      padding: theme.spacing(3),
     },
-    imageWrapper: {
+    imageContainer: {
       height: "100%",
     },
     image: {
-      width: "100%",
-      maxHeight: "100%",
-    },
-    action: {
-      background: grey[300],
+      width: "auto",
+      maxHeight: "400px",
     },
     descriptionHeadline: {
       textTransform: "uppercase",
-      fontSize: "4rem",
+      color: theme.customPalette.blue,
+    },
+    buttonContainer: {
+      marginTop: theme.spacing(4),
     },
     button: {
       color: grey[500],
@@ -45,21 +49,23 @@ export const JoinUs: React.FC = () => {
   return (
     <Section>
       <div className={classes.root}>
-        <div />
-        <div className={classes.imageWrapper}>
-          <img className={classes.image} src="images/garden-team.jpg" alt="" />
+        <div className={classes.imageContainer}>
+          <img className={classes.image} src="images/join.jpg" alt="" />
         </div>
-        <div className={classes.description}>
-          <Typography className={classes.descriptionHeadline} variant={"h1"}>
-            envie de nous rejoindre ?
+        <div className={classes.descriptionContainer}>
+          <Typography className={classes.descriptionHeadline} variant={"h2"}>
+            Nous recrutons
           </Typography>
-          <p>
+          <Divider />
+          <p className={classes.descriptionContent}>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex""
           </p>
-          <Button className={classes.button} variant="outlined" color="primary">
-            Rejoins nous !
-          </Button>
+          <div className={classes.buttonContainer}>
+            <Button className={classes.button} variant="outlined" color="primary">
+              Rejoins nous !
+            </Button>
+          </div>
         </div>
       </div>
     </Section>

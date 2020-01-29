@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       height: 400,
-      marginTop: theme.spacing(2),
+      marginTop: theme.spacing(8),
     },
   }),
 );
